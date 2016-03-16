@@ -3,25 +3,119 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+      <style type="text/css">
+            *{
+                  margin: 0;
+                  padding: 0;
+            }
+            .clear{
+                  clear: both;
+            }
+            .header{
+                  height: 100px;
+                  background-color: #a7d7cb;
+            }
+            .header .header-1{
+                  width: 860px;
+                  height: 100px;
+                  margin: 0 auto;
+            }
+            .header .logo{
+                  height: 100px;
+                  width: 100px;
+                  float: left;
+            }
+            .header .header-2 ul{
+                  /*line-height: 100px;*/
+                  float: right;
+            }
+            .header .header-2 li{
+                  float: left;
+                  list-style: none;
+                  font-family:Arial, Helvetica, sans-serif;
+                  font-size: 20px;
+                  margin-right: 40px;
+                  color: #c74343;
+                  cursor:pointer;
+                  margin-top: 40px;
+            }
+            .header .header-2 li:hover{
+                  /*border-bottom: 4px solid #000;*/
+                  font-weight: bold;
+            }
+            .footer{
+                  height: 500px;
+                  background-color: #3b8590;
+            }
+            .footer .list{
+                  width: 100px;
+                  height: 100px;
+                  margin: 0 auto;
+                  position: relative;
+                  top:-40px;
+                  left: 30px;
+                  display: none;
+            }
+            .footer .list .list-1 li{
+                  list-style: none;
+                  font-family:Arial, Helvetica, sans-serif;
+                  font-size: 18px;
+                  font-weight: bold;
+            }                  
+      </style>
 </head>
 <body>
-      <h1>目录</h1>
-      <ul>
-      	<li>
-      		<a href="3.jpg/index.html">3.jpg</a>
-      	</li>
-      	<li>
-      		<a href="4.png/index.html">4.png</a>
-      	</li>
-      	<li>
-      		<a href="作业/作业.html">作业</a>
-      	</li>
-      	<li>
-      		<a href="第三天练习/网页.html">第三天练习</a>
-      	</li>
-      	<li>
-      		<a href="第四天练习/第四天作业.html">第四天练习</a>
-      	</li>
-      </ul>
+      <div class="header">
+            <div class="header-1">
+                  <div>
+                        <img src="images/1.jpg" alt=""  class="logo">
+                  </div>
+                  <div class="header-2">
+                        <ul>
+                              <li class="header-21">Works</li>
+                              <li class="header-22">About me</li>
+                              <li class="header-23">.............</li>
+                              <li class="header-24">.............</li>
+                              <div class="clear"></div>
+                        </ul>
+                  </div>
+                  <div class="clear"></div>
+            </div>
+      </div>
+      <div class="footer">
+            <div class="list">
+                  <ul class="list-1">
+                        <li>
+                              <a href="第三天练习/网页.html">作业一</a>
+                        </li>
+                        <li>
+                              <a href="第四天练习/第四天作业.html">作业二</a>
+                        </li>
+                        <li>
+                              <a href="作业/作业.html">作业三</a>
+                        </li>
+                        <li>
+                              <a href="3.jpg/index.html">作业四</a>
+                        </li>
+                        <li>
+                              <a href="4.png/index.html">作业五</a>
+                        </li>    
+                  </ul>
+            </div>
+      </div>
+
+
+      <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+      <script>
+            $(".header-21").mouseenter(function(){
+                  $(".list").slideDown(500);
+            })
+            $(".list").mouseleave(function(){
+                  $(".list").slideUp(500);
+            })
+            $(".list").mouseenter(function(){
+                  $(".list").slideDown(500);
+            })
+      </script>
 </body>
 </html>
