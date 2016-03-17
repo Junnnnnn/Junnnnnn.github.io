@@ -35,6 +35,10 @@
                   cursor:pointer;
                   margin-top: 40px;
             }
+            .header .header-1 .header-2 .header-21 ul li{
+                  display: none;
+                  list-style: none;
+            }
             .header .header-2 .header-21:hover{
                   font-weight: bold;
             }
@@ -129,13 +133,10 @@
       <script type="text/javascript" src="js/jquery-1.11.1.js"></script>
       <script>
             $(".header-21").mouseenter(function(){
-                  $(".list").slideDown(500);
+                  $(this).find("li").slideDown(500);
             })
-            $(".list").mouseleave(function(){
-                  $(".list").slideUp(500);
-            })
-            $(".list").mouseenter(function(){
-                  $(".list").slideDown(500);
+            $(".header-21").mouseleave(function(){
+                  $(this).find("li").slideUp(500);
             })
       </script>
 </head>
