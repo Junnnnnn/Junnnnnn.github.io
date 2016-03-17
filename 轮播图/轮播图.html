@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.window{
+			width: 440px;
+			height: 440px;
+			overflow: hidden;
+		}
+		.box{
+			width: 1760px;
+		}
+		.pic{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div class="window">
+		<div class="box">
+			<img src="images/5.jpg" alt="" class="pic">
+			<img src="images/6.jpg" alt="" class="pic">
+			<img src="images/7.jpg" alt="" class="pic">
+			<img src="images/8.jpg" alt="" class="pic">
+		</div>
+	</div>
+	<div class="btw">
+		<input type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+		<input type="button" value="4">
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".btw input").click(function(){
+			var ind = $(this).index();
+			var num = ind * -440;
+			$(".box").animate({"margin-left":num},1000)
+		})
+	</script>
+</body>
+</html>
