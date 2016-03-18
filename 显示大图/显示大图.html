@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.small img{
+			height: 200px;
+			width: 200px;
+		}
+		.big div{
+			display: none;
+			position: absolute;
+			top:0px;
+			left: 0px;
+			margin-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="small">
+		<img src="images/5.jpg" alt="">
+		<img src="images/6.jpg" alt="">
+		<img src="images/7.jpg" alt="">
+		<img src="images/8.jpg" alt="">
+	</div>
+	<div class="big">
+		<div><img src="images/5.jpg" alt=""></div>
+		<div><img src="images/6.jpg" alt=""></div>
+		<div><img src="images/7.jpg" alt=""></div>
+		<div><img src="images/8.jpg" alt=""></div>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".small img").mouseenter(function(){
+			var pic1 = $(this).index();
+			$(".big div").eq(pic1).css("display","block").siblings().css("display","none");
+		})
+		$(".small img").mouseleave(function(){
+			var pic2 = $(this).index();
+			$(".big div").eq(pic2).css("display","none")
+		})
+		$(".small img").mousemove(function(event){
+			var x = event.pageX;
+			var y = event.pageY;
+			var pic3 = $(this).index();
+			$(".big div").eq(pic3).css({"top":y,"left":x});
+		})
+	</script>
+</body>
+</html>

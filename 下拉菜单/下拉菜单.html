@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.box{
+			width: 300px;
+			margin: 0 auto;
+		}
+		.list .list-1{
+			float: left;
+			list-style: none;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size: 26px;
+			margin-left: 20px;
+		}
+		.list .list-1 .list-11{
+			list-style: none;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size: 26px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="list">
+			<li class="list-1" >
+				<a href="">水果</a>
+				<ul class="list-11">
+					<li>苹果</li>
+					<li>西瓜</li>
+					<li>葡萄</li>
+				</ul>
+			</li>
+			<li class="list-1">
+				<a href="">蔬菜</a>
+				<ul class="list-11">
+					<li>黄瓜</li>
+					<li>土豆</li>
+					<li>地瓜</li>
+				</ul>
+			</li>
+			<li class="list-1">
+				<a href="">海鲜</a>
+				<ul class="list-11">
+					<li>鲈鱼</li>
+					<li>花蛤</li>
+					<li>螃蟹</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".list-1").mouseleave(function(){
+			$(this).find(".list-11").stop().slideUp(1000);
+		})
+		$(".list-1").mouseenter(function(){
+			$(this).find(".list-11").slideDown(1000);
+		})
+	</script>
+	</div>
+</body>
+</html>

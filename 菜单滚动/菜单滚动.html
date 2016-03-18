@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.list{
+			width: 350px;
+			margin: 0 auto;
+		}
+		.list li{
+			height: 40px;
+			width: 100px;
+			list-style: none;
+			float: left;
+			font-family:Verdana, Geneva, sans-serif;
+			font-size: 26px;
+			border:2px solid #000;
+			/*line-height: 40px;
+			text-align: center;*/
+			overflow: hidden;
+		}
+		.list .box-1{
+			width: 100px;
+			height: 40px;
+			background-color: #ff0;
+		}
+		.list .box-2{
+			width: 100px;
+			height: 40px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<ul class="list">
+		<li class="list-1">
+			<div class="box">
+				<div class="box-1">水果</div>
+				<div class="box-2">苹果</div>
+			</div>
+		</li>
+		<li class="list-1">
+			<div class="box">
+				<div class="box-1">蔬菜</div>
+				<div class="box-2">黄瓜</div>
+			</div>
+		</li>
+		<li class="list-1">
+			<div class="box">
+				<div class="box-1">海鲜</div>
+				<div class="box-2">螃蟹</div>
+			</div>
+		</li>
+	</ul>
+
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script>
+		$(".list-1").mouseenter(function(){
+			$(this).find(".box").animate({"margin-top":-40},1000)
+		})
+		$(".list-1").mouseleave(function(){
+			$(this).find(".box").animate({"margin-top":0},1000)
+		})
+	</script>
+</body>
+</html>
